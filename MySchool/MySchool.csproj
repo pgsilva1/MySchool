@@ -6,4 +6,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MySchool.Data\MySchool.Data.csproj" />
+    <ProjectReference Include="..\MySchool.IoC\MySchool.IoC.csproj" />
+    <ProjectReference Include="..\MySchool.Service\MySchool.Service.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MySchool.Data\MySchool.Data.csproj" />
-    <ProjectReference Include="..\MySchool.Model\MySchool.Model.csproj" />
+    <ProjectReference Include="..\MySchool.Service\MySchool.Service.csproj" />
   </ItemGroup>
 
 </Project>

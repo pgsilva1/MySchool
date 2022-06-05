@@ -11,5 +11,7 @@
                 return $"{FirstName} {SurName}";
             }
         }
+        public DateTime CreationDate { get; set; }
+        public DateTime? UpdateDate { get; set; }
     }
 }
