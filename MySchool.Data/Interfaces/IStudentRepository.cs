@@ -4,6 +4,8 @@ namespace MySchool.Data.Interfaces
 {
     public interface IStudentRepository
     {
-        public IEnumerable<Student> GetStudents();
+        Student GetById(int studentId);
+        public IEnumerable<Student> GetAll();
+        public bool Save(Student student);
     }
 }

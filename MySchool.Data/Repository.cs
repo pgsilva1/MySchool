@@ -53,9 +53,18 @@ namespace MySchool.Data
             DbSet.Remove(DbSet.Find(id));
         }
 
-        public int SaveChanges()
+        public bool SaveChanges()
         {
-            return Db.SaveChanges();
+            try
+            {
+                Db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+            return true;
         }
 
         public void Dispose()

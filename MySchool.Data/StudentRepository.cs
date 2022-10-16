@@ -10,9 +10,28 @@ namespace MySchool.Data
         {
             _context = context;
         }
-        public IEnumerable<Student> GetStudents()
+        public Student GetById(int studentId)
         {
-            return GetAll();
+            return base.GetById(studentId);
+        }
+
+        public IEnumerable<Student> GetAll()
+        {
+            return base.GetAll();
+        }
+
+        public bool Save(Student student)
+        {
+            if(student.Id > 0)
+            {
+                base.Update(student);
+            }
+            else
+            {
+                base.Add(student);
+            }
+
+            return base.SaveChanges();
         }
     }
 }

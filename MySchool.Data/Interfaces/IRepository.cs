@@ -11,6 +11,6 @@ namespace MySchool.Data.Interfaces
         IQueryable<TEntity> GetAll();
         void Update(TEntity obj);
         void Remove(int id);
-        int SaveChanges();
+        bool SaveChanges();
     }
 }
